@@ -1,26 +1,14 @@
-# 🧱 crawlkit
+# InfraCrawl
 
-![crawlkit banner](docs/assets/readme-banner.jpg)
 
 Shared Go infrastructure for local-first crawler archives.
 
-`crawlkit` is not a universal Slack, Discord, Notion, or GitHub crawler. It is
+`Infracrawl` is not a universal Slack, Discord, Notion, or GitHub crawler. It is
 the reusable foundation beneath those tools: SQLite hygiene, TOML config
 defaults, portable JSONL/Gzip packing, git-backed snapshot sharing, sync state,
 CLI output helpers, control/status metadata, a shared terminal explorer, and
 safe desktop-cache snapshot utilities.
 
-## Install
-
-```bash
-go get github.com/openclaw/crawlkit@latest
-go install github.com/openclaw/crawlkit/cmd/crawlctl@latest
-```
-
-Go packages are published by tagging this repository. There is no separate
-package registry step. See `docs/publishing.md` for the release commands.
-See `docs/boundary.md` for the crawlkit-versus-app ownership boundary and
-`docs/remote-contract.md` for the Worker/client split.
 
 ## Packages
 
@@ -68,12 +56,6 @@ Native install backends:
 - Windows: Task Scheduler
 - portable fallback: cron line rendering
 
-## Downstream apps
-
-- `gitcrawl`, `discrawl`, `notcrawl`, `wacrawl`, `telecrawl`, and `slacrawl`
-  consume `crawlkit` on `main`.
-- The apps keep provider schemas, auth, desktop/API parsing, privacy filters,
-  and user-facing CLI contracts. `crawlkit` owns only the reusable mechanics.
 
 ## Safety
 
